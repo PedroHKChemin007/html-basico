@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        label{
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Castro de usuario</h2>
+    <form action=""id ="user-form">
+        <div>
+            <label for="nome">nome</label>
+            <input type="text" name="nome" id="nome" 
+            placeholder="digite seu nome aqui!" required maxlength="50">
+        </div>
+        <div>
+            <label for="email">email</label>
+            <input type="email" nome="email" id="email" 
+            placeholder="email@exemplo.com" required maxlength="30">
+        </div>
+        <div>
+            <label for="senha">senha</label>
+            <input type="password" nome="senha" id="senha" placeholder="de 6 a 20 caracteres"
+            required minlength="6" maxlength="20" pattern="">
+        </div>
+        <div>
+            <label for="confirma_senha">senha</label>
+            <input type="password" nome="confirma_senha" id="confirma_senha" placeholder="de 6 a 20 caracteres"
+            required minlength="6" maxlength="20" pattern="">
+        </div>
+        <div>
+            
+        
+        <button name="botao_enviar" type="Button" onclick="enviarForm()">Enviar</button>
+        </div>
+    </form>
+
+    <script>
+        function enviarForm(){
+            let nome =document.getElementById("nome").value;
+                let senha =document.getElementById("senha").value;
+                let confirma_senha = document.getElementById("confirma_senha").value;
+                if(senha === confirma_senha){
+                    alert('senha correta');
+                }
+                else{
+                   alert('senha errada');
+                }
+        }
+    </script>
+
+
+
+</body>
+</html>
